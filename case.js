@@ -242,7 +242,7 @@ module.exports = ptz = async (ptz, m, chatUpdate, store) => {
 ⬡│☂︎ WIT : ${wit}
 ┬│☂︎ UTC : -
 │╰────────────────···
-┠─────═[ OWNER MENU ]═─────⋆
+┠────═[ OWNER MENU ]═────⋆
 │╭────────────────···
 ┴│☂︎ ${prefix}bot
 ⬡│☂︎ ${prefix}leave
@@ -281,7 +281,7 @@ module.exports = ptz = async (ptz, m, chatUpdate, store) => {
 ┴│☂︎ ${prefix}disk
 ┬│☂︎ ${prefix}ping
 │╰────────────────···
-┠─────═[ DOWNLOADER MENU ]═─────⋆
+┠──═[ DOWNLOADER MENU ]═──⋆
 │╭────────────────···
 ┴│☂︎ ${prefix}tiktok
 ⬡│☂︎ ${prefix}instagram
@@ -289,13 +289,13 @@ module.exports = ptz = async (ptz, m, chatUpdate, store) => {
 ⬡│☂︎ ${prefix}ttslide
 ┬│☂︎ ${prefix}gitclone
 │╰────────────────···
-┠─────═[ SEARCH MENU ]═─────⋆
+┠───═[ SEARCH MENU ]═───⋆
 │╭────────────────···
 ┴│☂︎ ${prefix}tiktoks
 ⬡│☂︎ ${prefix}pinterest
 ┬│☂︎ ${prefix}stickers
 │╰────────────────···
-┠─────═[ STALKERS MENU ]═─────⋆
+┠───═[ STALKERS MENU ]═──⋆
 │╭────────────────···
 ┴│☂︎ ${prefix}stalkgit
 ⬡│☂︎ ${prefix}stalktik
