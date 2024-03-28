@@ -1137,7 +1137,7 @@ cpu.total
                   if (stdout) return m?.reply(stdout)
                })
             }
-            if (m?.quoted.sender === global.NumberBot+'@s.whatsapp.net') {
+            if (quoted.sender === global.NumberBot+'@s.whatsapp.net') {
                if (isCmd) return
                let res = await axios.get(`https://simsimi.fun/api/v2/?mode=talk&lang=id&message=${encodeURIComponent(m.text)}&filter=false`)
                has = res.data
