@@ -251,7 +251,7 @@ module.exports = ptz = async (ptz, m, chatUpdate, store) => {
 ⬡│☂︎ =>
 ┬│☂︎ v
 │╰────────────────···
-┠─────═[ STICKER MENU ]═─────⋆
+┠───═[ STICKER MENU ]═────⋆
 │╭────────────────···
 ┴│☂︎ ${prefix}sticker
 ⬡│☂︎ ${prefix}smeme 
