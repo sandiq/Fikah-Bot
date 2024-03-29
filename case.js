@@ -287,6 +287,7 @@ module.exports = ptz = async (ptz, m, chatUpdate, store) => {
 ⬡│☂︎ ${prefix}instagram
 ⬡│☂︎ ${prefix}facebook
 ⬡│☂︎ ${prefix}ttslide
+⬡│☂︎ ${prefix}mediafire
 ┬│☂︎ ${prefix}gitclone
 │╰────────────────···
 ┠───═[ SEARCH MENU ]═───⋆
