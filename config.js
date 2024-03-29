@@ -26,8 +26,7 @@ global.idcennel = '120363200565854252@newsletter'
 global.thumb = 'https://telegra.ph/file/e907252f8e99d6d45dd1d.jpg'
 
 //database 
-global.urldb = 'mongodb+srv://sandytayo457:sandy123@cluster0.lxaplcx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'; // kosongin aja tapi kalo mau pake database mongo db isi url mongo
-
+global.urldb = ''
 //mess
 global.mess = {
    success: '*_🤗Done_*',
