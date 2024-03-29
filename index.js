@@ -54,7 +54,7 @@ global.loadDatabase = async function loadDatabase() {
       ...(global.db.data || {})
    };
 };
-await loadDatabase()
+loadDatabase()
 
 function createTmpFolder() {
    const folderName = "tmp";
