@@ -37,27 +37,23 @@ const connect = require('./server.js');
 connect(PORT);
 
 
-global.db = new Low(new JSONFile(`database.json`))
-global.DATABASE = global.db
+global.db = new Low(
+   global.urldb !== ''?  new mongoDB(urldb,"deadheart"):
+   new JSONFile(`database.json`), {}
+)
+//global.DATABASE = global.db
 global.loadDatabase = async function loadDatabase() {
-   if (global.db.READ) return new Promise((resolve) => setInterval(function () { (!global.db.READ ? (clearInterval(this), resolve(global.db.data == null ? global.loadDatabase() : global.db.data)) : null) }, 1 * 1000))
-   if (global.db.data !== null) return
-   global.db.READ = true
-   await global.db.read()
-   global.db.READ = false
+   global.db.READ = true;
+   await global.db.read();
+   global.db.READ = false;
    global.db.data = {
       users: {},
       chats: {},
       settings: {},
       ...(global.db.data || {})
-   }
-   global.db.chain = _.chain(global.db.data)
-}
-loadDatabase()
-
-if (global.db) setInterval(async () => {
-   if (global.db.data) await global.db.write()
-}, 30 * 1000)
+   };
+};
+await loadDatabase()
 
 function createTmpFolder() {
    const folderName = "tmp";
