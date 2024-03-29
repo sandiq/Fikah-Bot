@@ -158,6 +158,7 @@ module.exports = ptz = async (ptz, m, chatUpdate, store) => {
             autoread: false,
             public: true,
          }
+         if (global.db.data)  global.db.write();
       } catch (err) {
       }
    
