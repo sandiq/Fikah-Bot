@@ -385,7 +385,7 @@ module.exports = ptz = async (ptz, m, chatUpdate, store) => {
             if (!text) return m?.reply(`Ex: ${prefix+command} spongebob`)
             const res = await stickersearch(text)
             for (let item of res.sticker){
-               let nyet = await ptz.sendImageAsSticker(m?.chat, smeme, m, { packname: global.packname, author: global.author })
+               let nyet = await ptz.sendImageAsSticker(m?.chat, item, m, { packname: global.packname, author: global.author })
                await fs.unlinkSync(nyet)
             }
          }
