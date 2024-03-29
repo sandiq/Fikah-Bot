@@ -405,7 +405,7 @@ module.exports = ptz = async (ptz, m, chatUpdate, store) => {
          //==========================================//
          case "simi": case 'sim':{
             if (!text) return m?.reply(`Ex: ${prefix + command} halo sim`)
-            const result = await axios.get(`https://deskus-ndyzzproductions.koyeb.app/api/simi?text=${text}`).then(data => data.data)
+            const result = await axios.get(`https://deskus-ndyzzproductions.koyeb.app/api/simi?text=${encodeURIComponent(text)}`).then(data => data.data)
             m?.reply(result.result)
          }
          break
