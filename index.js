@@ -17,6 +17,7 @@ const fetch = require("node-fetch")
 const FileType = require('file-type')
 const _ = require('lodash')
 const { Low, JSONFile } = require('./lib/lowdb')
+const { mongoDB } = require('./lib/mongoDB.js')
 const { Boom } = require("@hapi/boom");
 const PhoneNumber = require("awesome-phonenumber");
 const readline = require("readline");
