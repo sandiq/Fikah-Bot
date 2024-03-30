@@ -514,7 +514,7 @@ module.exports = ptz = async (ptz, m, chatUpdate, store) => {
          break
          //==========================================//
          case "leave": {
-            if (!isOwner) return m?.reply(mess.owner)
+            if (!isCreator) return m?.reply(mess.admin)
             m?.reply("Aku Pergi :v")
             await ptz.groupLeave(m?.chat).then((res) => m?.reply(jsonformat(res))).catch((err) => m?.reply(jsonformat(err)))
          }
