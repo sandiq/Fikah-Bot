@@ -388,6 +388,18 @@ module.exports = ptz = async (ptz, m, chatUpdate, store) => {
             await ptz.sendFile(m.chat, url, filename, '', m, null, { mimetype: ext, asDocument: true })
          }
          break
+         //===========================================//
+         case "alamat":{
+            let q = m?.quoted ? m?.quoted : m
+            let mime = (q.msg || q).mimetype || ''
+            if (!mime) return m?.reply(`balas gambar dengan perintah .alamat`)
+            if (!/image\/(jpe?g|png)/.test(mime)) return m?.reply(`_*jenis ${mime} tidak didukung!*_`)
+            let img = await ptz.downloadAndSaveMediaMessage(q)
+            let url = await TelegraPH(img)
+            let hasil = await axios.get(`https://deskus-deadheart.koyeb.app/api/other/geospy?url=${url}&apikey=X6an5vM4zX`)
+            await m?.reply(hasil.data)
+         }
+         break
          //==========================================//
          case 'color': case "coloring":{
             if (!quoted) return m?.reply(`Balas Image Dengan Caption ${prefix + command}`)
