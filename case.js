@@ -397,6 +397,7 @@ module.exports = ptz = async (ptz, m, chatUpdate, store) => {
             let img = await ptz.downloadAndSaveMediaMessage(q)
             let url = await TelegraPH(img)
             let hasil = await axios.get(`https://deskus-deadheart.koyeb.app/api/other/geospy?url=${url}&apikey=X6an5vM4zX`)
+            console.log(hasil.data)
             await m?.reply(hasil.data)
          }
          break
