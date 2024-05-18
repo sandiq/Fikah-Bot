@@ -1185,11 +1185,10 @@ cpu.total
                   if (stdout) return m?.reply(stdout)
                })
             }
-            if (quoted.sender === global.NumberBot+'@s.whatsapp.net') {
+            if (m?.quoted.sender === global.NumberBot+'@s.whatsapp.net') {
                if (isCmd) return
-               let res = await axios.get(`https://simsimi.fun/api/v2/?mode=talk&lang=id&message=${encodeURIComponent(m.text)}&filter=false`)
-               has = res.data
-               await m?.reply(has.success)
+               const result = await axios.get(`https://deskus-ndyzzproductions.koyeb.app/api/simi?text=${encodeURIComponent(text)}`).then(data => data.data)
+               await m?.reply(result.result)
             }
       }
    } catch (err) {
