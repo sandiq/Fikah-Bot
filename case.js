@@ -391,7 +391,7 @@ module.exports = ptz = async (ptz, m, chatUpdate, store) => {
          break
          case "gpt": case 'ai': {
             if (!text) return m?.reply(`Ex: ${prefix+command} halo`)
-            const { GPT } = require('d-scrape');
+            const { GPT } = require('d-scrape').ai;
             const gpt = new GPT()
             async function gpt4(prompt) {
                const messages = [
