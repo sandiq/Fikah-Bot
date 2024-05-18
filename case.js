@@ -388,6 +388,22 @@ module.exports = ptz = async (ptz, m, chatUpdate, store) => {
             await ptz.sendFile(m.chat, url, filename, '', m, null, { mimetype: ext, asDocument: true })
          }
          break
+         case "gpt": case 'ai': {
+            if (!text) return m?.reply(`Ex: ${prefix+command} halo`)
+            const { GPT } = require('d-scrape');
+            const gpt = new GPT()
+            async function gpt4(prompt) {
+               const messages = [
+                  { role: "system", content: "You are good component." },
+                  { role: "user", content: prompt }
+               ]
+                  let res = await gpt.fetchData(messages)
+                     return res
+            }
+            const results = await gpt4(text);
+            ptz.sendMessage(m?.chat, {text:results}, {quoted:m});
+         }
+         break
          //===========================================//
          case "alamat":{
             let q = m?.quoted ? m?.quoted : m
