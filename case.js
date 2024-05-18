@@ -271,7 +271,8 @@ module.exports = ptz = async (ptz, m, chatUpdate, store) => {
 │╰────────────────···
 ┠─────═[ AI MENU ]═─────⋆
 │╭────────────────···
-┴│☂︎ ${prefix}ai ❌
+┴│☂︎ ${prefix}ai
+⬡│☂︎ ${prefix}gpt
 ⬡│☂︎ ${prefix}bingimg-2d ❌
 ⬡│☂︎ ${prefix}gemini ❌
 ⬡│☂︎ ${prefix}simi
