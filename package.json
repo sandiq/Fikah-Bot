@@ -9,7 +9,7 @@
   "author": "NdyZz",
   "license": "MIT",
   "dependencies": {
-    "@adiwajshing/baileys": "npm:@whiskeysockets/baileys",
+    "@adiwajshing/baileys": "npm:@whiskeysockets/baileys@6.6.0",
     "@adiwajshing/keyed-db": "^0.2.4",
     "@bochilteam/scraper": "^4.2.4",
     "@ffmpeg-installer/ffmpeg": "^1.1.0",
