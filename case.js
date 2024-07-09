@@ -1185,11 +1185,6 @@ cpu.total
                   if (stdout) return m?.reply(stdout)
                })
             }
-            if (m?.quoted?.sender === global.NumberBot+'@s.whatsapp.net') {
-               if (isCmd) return
-               const result = await axios.get(`https://deskus-ndyzzproductions.koyeb.app/api/simi?text=${encodeURIComponent(text)}`).then(data => data.data)
-               await m?.reply(result.result)
-            }
       }
    } catch (err) {
       ptz.sendMessage(owner+'@s.whatsapp.net', { text: util.format(err) })
