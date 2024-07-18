@@ -5,6 +5,7 @@ RUN apt-get update && \
   ffmpeg \
   imagemagick \
   webp && \
+  npm install pm2 -g && \
   apt-get upgrade -y && \
   rm -rf /var/lib/apt/lists/*
 
